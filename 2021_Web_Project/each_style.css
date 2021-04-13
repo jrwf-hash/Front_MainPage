@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Spoqa;
+  src: url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+}
+
+body {
+  width: 1920px;
+  height: 3818px;
+  padding: 0 0 127px;
+  background-color: #ffffff;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+#menu_background {
+  /*회색 지도, 메뉴, 그래프, 광고 영역*/
+  width: 1920px;
+  height: 3345px;
+  margin: 194px 0 78px;
+  padding: 1853px 524px 68px 523px;
+  background-color: #EDEDED;
+}
+
+#menu_menu_back {
+  width: 872px;
+  height: 885px;
+  margin: 0 0 72px 79px;
+  padding: 29px 44px 79px 45px;
+  box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+ul#navi {
+  width: 244px;
+  height: 100px;
+  margin: 38px 0 0;
+  padding: 38px 98px 35px 96px;
+  text-indent: 10px;
+}
+
+ul#navi, ul#navi ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li.group {
+  text-align: center;
+}
+
+
+li.group div.title {
+  width: 244px;
+  height: 85px;
+  text-align: center;
+  /* margin: 35px 0 0; */
+  /*마진 사용하면 메뉴들 사이가 떨어짐*/
+  padding: 40px 74px 33px 66px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+/*큰 메뉴 마우스 호버 시 배경 색 지정*/
+li.group div.title:hover {
+  background-color: #6EA24D;
+  text-decoration: underline;
+  color: #f1f1f1;
+}
+
+ul.sub li {
+  width: 244px;
+  height: 85px;
+  /* margin: 35px 0 0; */
+  /*마진 사용하면 메뉴들 사이가 떨어짐*/
+  padding: 40px 74px 33px 66px;
+  line-height: 35px;
+  background-color: #9BD377;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul.sub li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+ul.sub li:hover{
+  text-decoration: underline;
+}
+
+ul.navi li:active{
+  text-decoration: underline;
+  font-weight: bold;
+  color:#f1f1f1;
+}
+
+/* #ads {
+  width: 872px;
+  height: 201px;
+} */
+.footer {
+  width: 866px;
+  height: 74px;
+  margin: 59px 527px 0;
+  font-family: "Spoqa Han Sans";
+  font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1f1f1f;
+}

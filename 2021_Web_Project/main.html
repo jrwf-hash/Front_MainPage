@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>COVAC</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+    //모든 서브 메뉴 감추기
+    $(".sub").css({
+      display: "none"
+    });
+    //$(".sub").hide(); //위코드와 동일
+
+    $(".title").click(function() {
+      //일단 서브메뉴 다 가립니다.
+      //$(".sub").css({display:"none"});
+
+      //열린 서브메뉴에 대해서만 가립니다.
+      $(".sub").each(function() {
+        console.log($(this).css("display"));
+        if ($(this).css("display") == "block") {
+          //$(".sub").css({display:"none"});
+          //$(this).hide();
+          $(this).slideUp("fast");
+        }
+      });
+
+      //현재 요소의 다음 요소를 보이게 합니다.
+      //$(this).next("ul").css({display:"block"});
+      //$(this).next("ul").show();
+      $(this).next("ul").slideDown("fast");
+    })
+  });
+</script>
+
+
+<script>
+  $(function() {
+    var sBt = $("ul > li"); //  ul > li 이를 sBtn으로 칭한다. (클릭이벤트는 li에 적용 된다.)
+    sBt.find("a").click(function() { // sBtn에 속해 있는  a 찾아 클릭 하면.
+      sBt.removeClass("active"); // sBtn 속에 (active) 클래스를 삭제 한다.
+      $(this).parent().addClass("active"); // 클릭한 a에 (active)클래스를 넣는다.
+    })
+  })
+</script>
+
+<script>
+  $(function() {
+    var sBtn = $("li.group .title"); //  ul > li 이를 sBtn으로 칭한다. (클릭이벤트는 li에 적용 된다.)
+    sBtn.find("a").click(function() { // sBtn에 속해 있는  a 찾아 클릭 하면.
+      sBtn.removeClass("active"); // sBtn 속에 (active) 클래스를 삭제 한다.
+      $(this).parent().addClass("active"); // 클릭한 a에 (active)클래스를 넣는다.
+    })
+  })
+</script>
+
+<!--
+<script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("title");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
+</script>
+-->
+<header>
+  <h1>COVAC</h1>
+</header>
+
+<nav>
+  <div id="menu_background">
+    <ul id="navi">
+      <li class="group">
+        <div class="title"><a href="#">백신</a></div>
+      </li>
+
+      <li class="group">
+        <div class="title"><a href="#">기사</a></div>
+        <ul class="sub">
+          <li><a href="#" href="arti_press.html">언론사 별</a></li>
+          <li><a href="#" href="arti_vac.html">백신 별</a></li>
+        </ul>
+      </li>
+
+      <li class="group">
+        <div class="title"><a href="#">접종후기</a></div>
+      </li>
+
+      <li class="group">
+        <div class="title"><a href="#">공지</a></div>
+        <ul class="sub">
+          <li><a href="#" href="notice.html">공지사항</a></li>
+          <li><a href="#" href="noti_information.html">문의 및 제보</a></li>
+          <li><a href="#" href="noti_spon_infor.html">후원정보</a></li>
+        </ul>
+      </li>
+
+      <li class="group">
+        <div class="title"><a href="#">바로알기</a></div>
+        <ul class="sub">
+          <li><a href="#" href="knowing_type of vac.html">백신 종류별 특성</a></li>
+          <li><a href="#" href="knowing_vac-organ.html">백신 접종 기관</a></li>
+          <li><a href="#" href="knowing_vac_vidio.html">백신 동영상</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <p class="footer">
+      Copyright2021.1조 All pictures cannot be copied without permisson.<br>
+      yghasd@g.shingu.ac.kr
+    </p>
+</body>
+
+</html>

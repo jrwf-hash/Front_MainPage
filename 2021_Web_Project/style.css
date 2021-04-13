@@ -1,0 +1,152 @@
+/*
+폰트 추가(spoaqhansans), footer부분
+
+
+각 메뉴 효과 유지 기능 성공
+각 메뉴 색상 범위 문제 수정해야함
+
+*/
+
+@font-face {
+  font-family: Spoqa;
+  src: url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+}
+header{
+  background: #ffffff;
+  height: 206px;
+}
+
+body {
+  padding: 0 0 127px;
+  background-color: #ffffff;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+#menu_background {
+  /*회색 지도, 메뉴, 그래프, 광고 영역*/
+  background-color: #EDEDED;
+  position: fixed;
+  margin-left: 40px;
+  width: 390px;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#menu_menu_back {
+  box-shadow: 1.1px 2.8px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+ul#navi {
+  width: 390px;
+  height: 100px;
+  margin: 40px 0 0;
+  padding: 40px 74px 40px 74px;
+  text-indent: 10px;
+  border: 1px solid #000000;
+}
+
+ul#navi, ul#navi ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.
+
+li.group {
+  text-align: center;
+}
+
+
+li.group div.title {
+  width: 250px;
+  height: 85px;
+  text-align: center;
+  /* margin: 35px 0 0; */
+  /*마진 사용하면 메뉴들 사이가 떨어짐*/
+  padding: 40px 74px 40px 74px;
+  background: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+li.group div.title:link {
+
+  text-decoration: none;
+}
+
+ul.sub li {
+  width: 250px;
+  height: 85px;
+  /* margin: 35px 0 0; */
+  /*마진 사용하면 메뉴들 사이가 떨어짐*/
+  padding: 40px 74px 40px 74px;
+  line-height: 35px;
+  background-color: #9BD377;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul.sub li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+ul.sub li:hover{
+  text-decoration: underline;
+  color:#000000;
+}
+
+/*(추가)script코드 부분*/
+ul>li:hover>a,
+ul>li:focus>a,
+ul>li:active>a,
+ul>li.active>a {
+  color: #f1f1f1;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+li.group .title:hover>a,
+li.group .title:focus>a,
+li.group .title:active>a,
+li.group .title.active>a {
+  color: #f1f1f1;
+  background-color: #6EA24D;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+/* #ads {
+  width: 872px;
+  height: 201px;
+} */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding:  15px 0;
+  text-align: center;
+  font-family: "Spoqa Han Sans";
+  font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1f1f1f;
+}

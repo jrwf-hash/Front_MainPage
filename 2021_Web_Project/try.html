@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jzuery-latest.min.js">
+
+    </script>
+    <script type="text/javascript">
+    function selectAll(selectAll)  {
+const checkboxes
+     = document.getElementsByName('check');
+
+checkboxes.forEach((checkbox) => {
+  checkbox.checked = selectAll.checked;
+})
+}
+    </script>
+  </head>
+  <body>
+    <input type='checkbox'
+         name='check'
+         value='selectall'
+         onclick='selectAll(this)'/> <b>전체선택</b>
+
+  <input type='checkbox' name='check' value='JTBC'/> JTBC
+
+  <input type='checkbox'
+         name='check'
+         value='MBC' /> MBC
+
+  <input type='checkbox'
+         name='check'
+         value='YTN' /> YTN
+  </body>
+</html>
